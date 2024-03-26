@@ -14,7 +14,7 @@ struct ContentView: View {
                 JournalView()
                     .tabItem {
                         Label("일기", systemImage: "book.pages")
-                    } 
+                    }
                 
                 CalendarView()
                     .tabItem {
