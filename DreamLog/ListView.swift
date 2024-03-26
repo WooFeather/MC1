@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PagesView: View {
+struct ListView: View {
     private var formattedDate: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd"
@@ -17,19 +17,7 @@ struct PagesView: View {
     var body: some View {
         List {
             NavigationLink {
-                VStack {
-                    Text("\(formattedDate)")
-                        .font(.title)
-                        .foregroundStyle(Color("MyColor"))
-                        .padding(.bottom, 30)
-                    
-                    TabView {
-                        SummaryView(notes: "test", selectedDate: .now)
-                        FullTextView(notes: "오늘 꿈에서, 넓은 초원을 달리는 작고 귀여운 포메라니안 강아지가 나를 향해 달려왔어. 이 강아지는 예전에 사랑했던 내 강아지였고, 마치 천국의 동산에서 나를 마중 나온 것 같았어. 푸른 하늘 아래, 야생화가 가득한 그곳에서 우리는 재회했고, 그 순간은 나에게 큰 위안과 행복을 가져다주었어.", selectedDate: .now)
-                    }
-                    .tabViewStyle(.page(indexDisplayMode: .always))
-                    .indexViewStyle(.page(backgroundDisplayMode: .always))
-                }
+                ResultView(notes: "오늘 꿈에서, 넓은 초원을 달리는 작고 귀여운 포메라니안 강아지가 나를 향해 달려왔어. 이 강아지는 예전에 사랑했던 내 강아지였고, 마치 천국의 동산에서 나를 마중 나온 것 같았어. 푸른 하늘 아래, 야생화가 가득한 그곳에서 우리는 재회했고, 그 순간은 나에게 큰 위안과 행복을 가져다주었어.", selectedDate: .now)
             } label: {
                 Image("SummaryImage")
                     .resizable()
@@ -59,5 +47,5 @@ struct PagesView: View {
 }
 
 #Preview {
-    PagesView()
+    ListView()
 }

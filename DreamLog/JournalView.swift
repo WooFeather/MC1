@@ -15,17 +15,33 @@ struct JournalView: View {
                     .ignoresSafeArea(.all, edges: .top)
                 
                 VStack {
-                    Image("MainRini")
+                    Text("오늘의 꿈을 들려줘 ✨")
+                        .font(.title2)
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 20)
+                        .padding()
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 30)
+                                .stroke(Color.white,lineWidth: 1.5)
+                                
+                        )
+                    
+
+                    Image(systemName: "arrowtriangle.down.fill")
+                        .foregroundStyle(Color.white)
+                        .padding(.bottom)
+
+                    Image("CalendarRini")
                         .resizable()
-                        .frame(width: 300, height: 192.28)
-                        .offset(x: 35)
+                        .frame(width: 200, height: 192.28)
                     
                     NavigationLink {
                         WriteView()
+                            .toolbarRole(.editor)
                     } label: {
                         HStack {
                             Text("기록하기\(Image(systemName: "pencil"))")
-                                .foregroundStyle(.primary)
                                 .font(.title.bold())
                                 .foregroundStyle(.white)
                                 .frame(maxWidth: .infinity)
@@ -33,7 +49,7 @@ struct JournalView: View {
                     }
                     .frame(width: 300, height: 100)
                     .background(.secondary)
-                    .clipShape(.capsule)
+                    .clipShape(RoundedRectangle(cornerRadius: 30))
                 }
             }
             .navigationTitle("꿈기로그")

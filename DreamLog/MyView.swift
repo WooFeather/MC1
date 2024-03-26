@@ -9,11 +9,16 @@ import SwiftUI
 
 struct MyView: View {
     var body: some View {
-        VStack {
-            Text("Team  多多")
-                .font(.title3.bold())
-                .padding(.bottom, 5)
-            Text("🪽💡🐒👙📁")
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color("MyColor"), Color("MyColor2"), Color.white]), startPoint: .center, endPoint: .bottom)
+                .ignoresSafeArea(.all, edges: .top)
+            VStack {
+                Text("Team  多多")
+                    .font(.title3.bold())
+                    .foregroundStyle(.white)
+                    .padding(.bottom, 5)
+                Text("🪽💡🐒👙📁")
+            }
         }
     }
 }

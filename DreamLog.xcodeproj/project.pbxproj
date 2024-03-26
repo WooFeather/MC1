@@ -18,6 +18,8 @@
 		793B21C12BB00651001AC549 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B21C02BB00651001AC549 /* SummaryView.swift */; };
 		793B21C32BB14566001AC549 /* FullTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B21C22BB14566001AC549 /* FullTextView.swift */; };
 		793B21C52BB1485B001AC549 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B21C42BB1485B001AC549 /* ResultView.swift */; };
+		793B21C72BB29DEF001AC549 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B21C62BB29DEF001AC549 /* ListView.swift */; };
+		793B21C92BB29E35001AC549 /* GatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B21C82BB29E35001AC549 /* GatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		793B21C02BB00651001AC549 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		793B21C22BB14566001AC549 /* FullTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTextView.swift; sourceTree = "<group>"; };
 		793B21C42BB1485B001AC549 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		793B21C62BB29DEF001AC549 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		793B21C82BB29E35001AC549 /* GatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +76,9 @@
 				793B21C42BB1485B001AC549 /* ResultView.swift */,
 				793B21C02BB00651001AC549 /* SummaryView.swift */,
 				793B21C22BB14566001AC549 /* FullTextView.swift */,
+				793B21C82BB29E35001AC549 /* GatherView.swift */,
 				793B21BA2BAD098B001AC549 /* CalendarView.swift */,
+				793B21C62BB29DEF001AC549 /* ListView.swift */,
 				793B21BC2BAD0991001AC549 /* MyView.swift */,
 				793B21AC2BAD08C5001AC549 /* Assets.xcassets */,
 				793B21AE2BAD08C5001AC549 /* Preview Content */,
@@ -161,9 +167,11 @@
 				793B21B92BAD0939001AC549 /* JournalView.swift in Sources */,
 				793B21C12BB00651001AC549 /* SummaryView.swift in Sources */,
 				793B21C52BB1485B001AC549 /* ResultView.swift in Sources */,
+				793B21C72BB29DEF001AC549 /* ListView.swift in Sources */,
 				793B21AB2BAD08C4001AC549 /* ContentView.swift in Sources */,
 				793B21BF2BAD1555001AC549 /* WriteView.swift in Sources */,
 				793B21BD2BAD0991001AC549 /* MyView.swift in Sources */,
+				793B21C92BB29E35001AC549 /* GatherView.swift in Sources */,
 				793B21C32BB14566001AC549 /* FullTextView.swift in Sources */,
 				793B21BB2BAD098B001AC549 /* CalendarView.swift in Sources */,
 				793B21A92BAD08C4001AC549 /* DreamLogApp.swift in Sources */,

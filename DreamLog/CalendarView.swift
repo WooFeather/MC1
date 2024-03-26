@@ -19,12 +19,132 @@ struct CalendarView: View {
     _clickedCurrentMonthDates = State(initialValue: clickedCurrentMonthDates)
   }
   
-  var body: some View {
-    VStack {
-      headerView
-      calendarGridView
+    var body: some View {
+        VStack {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    Button {
+                        // month list action
+                    } label: {
+                        ZStack {
+                            Image("calendarImage3")
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(Circle())
+                                .frame(width: 90)
+                                .overlay(
+                                    Circle()
+                                        .stroke(Color.white,lineWidth: 5)
+                                )
+                            
+                            VStack {
+                                Text("2023")
+                                    .bold()
+                                Text("12")
+                                    .font(.largeTitle.bold())
+                                    .padding(.bottom, 10)
+                            }
+                            .foregroundStyle(.white)
+                        }
+                    }
+                    .padding(.trailing)
+                    
+                    Button {
+                        // month list action
+                    } label: {
+                        ZStack {
+                            Image("calendarImage2")
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(Circle())
+                                .frame(width: 90)
+                                .overlay(
+                                    Circle()
+                                        .stroke(Color.white,lineWidth: 5)
+                                )
+                            
+                            VStack {
+                                Text("2024")
+                                    .bold()
+                                Text("01")
+                                    .font(.largeTitle.bold())
+                                    .padding(.bottom, 10)
+                            }
+                            .foregroundStyle(.white)
+                        }
+                    }
+                    .padding(.trailing)
+                    
+                    Button {
+                        // month list action
+                    } label: {
+                        ZStack {
+                            Image("calendarImage4")
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(Circle())
+                                .frame(width: 90)
+                                .overlay(
+                                    Circle()
+                                        .stroke(Color.white,lineWidth: 5)
+                                )
+                            
+                            VStack {
+                                Text("2024")
+                                    .bold()
+                                Text("02")
+                                    .font(.largeTitle.bold())
+                                    .padding(.bottom, 10)
+                            }
+                            .foregroundStyle(.white)
+                        }
+                    }
+                    .padding(.trailing)
+                    
+                    Button {
+                        // month list action
+                    } label: {
+                        ZStack {
+                            Image("SummaryImage")
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(Circle())
+                                .frame(width: 90)
+                                .overlay(
+                                    Circle()
+                                        .stroke(Color.white,lineWidth: 5)
+                                )
+                            
+                            VStack {
+                                Text("2024")
+                                    .bold()
+                                Text("03")
+                                    .font(.largeTitle.bold())
+                                    .padding(.bottom, 10)
+                            }
+                            .foregroundStyle(.white)
+                        }
+                    }
+                }
+                .padding(.leading)
+                
+            }
+            
+            VStack {
+                headerView
+                    .padding(.top)
+                calendarGridView
+            }
+            .frame(maxWidth: 370, maxHeight: 450)
+            .background(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color("MyColor"),lineWidth: 1.5)
+                
+            )
+        }
     }
-  }
   
   // MARK: - 헤더 뷰
   private var headerView: some View {
@@ -150,7 +270,7 @@ private struct CellView: View {
     } else if isToday {
       return Color.gray
     } else {
-      return Color.white
+        return Color.white
     }
   }
     

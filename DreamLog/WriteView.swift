@@ -16,7 +16,7 @@ struct WriteView: View {
         NavigationStack {
             ZStack {
                 Color.secondary
-                    .opacity(0.1)
+                    .opacity(0.3)
                     .ignoresSafeArea()
                 
                 ZStack {
@@ -28,25 +28,26 @@ struct WriteView: View {
                             .padding()
                             .background(Color("MyColor"))
                             .clipShape(.capsule)
-                            .offset(y: -200)
+                            .offset(y: -120)
                         
                         Image(systemName: "arrowtriangle.down.fill")
                             .foregroundStyle(Color("MyColor"))
-                            .offset(y: -200)
+                            .offset(y: -120)
                             
                         
                         Image("WriteRini")
                             .resizable()
                             .frame(width: 200, height: 200)
-                            .offset(y:-210)
+                            .offset(y:-120)
                         
                         DatePicker("", selection: $selectedDate, displayedComponents: .date)
-                            .offset(x:-240, y:-265)
+                            .offset(x:-235, y:-170)
                     }
                     
                     ZStack {
                         TextEditor(text: $notes)
-                            .frame(maxWidth: 330, maxHeight: 490)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                            .frame(maxWidth: 330, maxHeight: 300)
                             .lineSpacing(10)
                             .disableAutocorrection(true)
                             .padding()
@@ -58,15 +59,15 @@ struct WriteView: View {
                                         .foregroundStyle(.tertiary)
                                         .padding(.top, 8)
                                         .padding(.leading, 40)
-                                        .offset(x:-90, y:-230)
+                                        .offset(x:-88, y:-135)
                                 }
                             }
                         }
                     }
                     .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color("MyColor"), lineWidth: 7)
-                            .frame(maxWidth: 330, maxHeight: 490)
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color("MyColor"), lineWidth: 1.5)
+                            .frame(maxWidth: 330, maxHeight: 300)
                     )
                     .offset(y:150)
                 }
@@ -80,7 +81,7 @@ struct WriteView: View {
                 })
             }
         }
-        .ignoresSafeArea(.keyboard)
+//        .ignoresSafeArea(.keyboard)
     }
 }
 

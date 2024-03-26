@@ -16,7 +16,7 @@ struct ContentView: View {
                         Label("일기", systemImage: "book.pages")
                     }
                 
-                CalendarView()
+                GatherView()
                     .tabItem {
                         Label("모아보기", systemImage: "calendar")
                     }
